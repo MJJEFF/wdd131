@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: rgb(244, 244, 244);
 }
 
 
 header {
-    background-color: #042ab5;
+    background-color: rgb(4, 42, 181);
     color: rgb(255, 255, 255);
     text-align: center;
 }
@@ -21,17 +21,17 @@ header {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: #181e35;
+    background-color: rgb(24, 30, 53);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 nav a:hover {
-    color: yellow;
+    color: rgb(255, 255, 0);
 }
 
 
@@ -52,13 +52,13 @@ h1 {
 
 
 .card {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
 }
 
 .card h2 {
-    background-color: #042ab5;
+    background-color: rgb(4, 42, 181);
     color: rgb(255, 255, 255);
     padding: 10px;
     text-align: center;
@@ -73,14 +73,14 @@ img {
 
 
 footer {
-    background-color: #042ab5;
+    background-color: rgb(4, 42, 181);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 15px;
 }
 
 #lastModified {
-    color: yellow;
+    color: rgb(255, 255, 0);
 }
 
 /* About Section */
