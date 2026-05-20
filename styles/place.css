@@ -1,0 +1,142 @@
+/* =====================================================
+   place.css  –  Nigeria Country Page (Mobile Base)
+   WDD131 W03 | Jeffrey Akanama
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --clr-green: #008751;
+    --clr-green-dark: #005c37;
+    --clr-white: #ffffff;
+    --clr-offwhite: #f7f7f5;
+    --clr-text: #1a1a1a;
+    --clr-text-muted: #555;
+    --clr-accent: #d4a017;
+    --clr-footer-bg: #004d28;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', Helvetica, sans-serif;
+
+    --radius-card: 8px;
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--clr-text);
+    background-color: var(--clr-offwhite);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: var(--clr-green);
+    text-align: center;
+    padding: 1.25rem 1rem;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    color: var(--clr-white);
+    letter-spacing: 0.04em;
+}
+
+/* ---------- Accent Bar ---------- */
+.accent-bar {
+    height: 8px;
+    background-color: var(--clr-green-dark);
+}
+
+/* ---------- Hero ---------- */
+.hero-wrapper {
+    position: relative;
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 420px;
+}
+
+/* ---------- Cards (mobile: stacked below image) ---------- */
+.data-card,
+.weather-card {
+    background: var(--clr-white);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 1rem;
+}
+
+.data-card h2,
+.weather-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--clr-green);
+}
+
+/* ---------- Definition Lists ---------- */
+dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.4rem 0.75rem;
+    font-size: 0.97rem;
+}
+
+dt {
+    font-weight: 600;
+    text-align: right;
+    color: var(--clr-text-muted);
+}
+
+dd {
+    text-align: left;
+}
+
+/* ---------- Weather – mobile ---------- */
+.weather-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* Pseudo-element icon – hidden on mobile, shown on wide via place-large.css */
+.weather-heading::after {
+    content: '⛅';
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* SVG icon – mobile only */
+.weather-icon-svg {
+    display: block;
+    margin: 0.75rem auto 1rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--clr-footer-bg);
+    color: var(--clr-white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.92rem;
+    line-height: 1.9;
+}

@@ -1,0 +1,74 @@
+/* =====================================================
+   place-large.css  –  Nigeria Country Page (Wide View)
+   Loaded via media attribute: min-width: 760px
+   WDD131 W03 | Jeffrey Akanama
+   ===================================================== */
+
+header h1 {
+    font-size: 3.2rem;
+}
+
+/* Hero image fills width; cards overlay on top */
+.hero-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cards positioned absolutely over the hero image */
+.data-card,
+.weather-card {
+    position: absolute;
+    margin: 0;
+    width: 290px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    padding: 0 1.75rem 1.5rem;
+}
+
+.data-card {
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.weather-card {
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+/* Card header bar – green background on wide */
+.data-card h2,
+.weather-card h2 {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    margin: 0 -1.75rem 1rem;
+    padding: 0.6rem 1.75rem;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+    border-bottom: none;
+    font-size: 1.5rem;
+}
+
+/* Show pseudo-element ⛅ on wide view */
+.weather-heading::after {
+    display: inline;
+}
+
+/* Weather heading: space between text and icon */
+.weather-heading {
+    justify-content: space-between;
+}
+
+/* Hide SVG icon on wide – pseudo-element takes over */
+.weather-icon-svg {
+    display: none;
+}
+
+footer {
+    font-size: 1rem;
+}
