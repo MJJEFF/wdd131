@@ -1,9 +1,7 @@
 /* =====================================================
-   place.css  –  Nigeria Country Page (Mobile Base)
+   place.css  –  Nigeria Country Page
    WDD131 W03 | Jeffrey Akanama
    ===================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap');
 
 /* ---------- CSS Variables ---------- */
 :root {
@@ -12,8 +10,7 @@
     --clr-white: #ffffff;
     --clr-offwhite: #f7f7f5;
     --clr-text: #1a1a1a;
-    --clr-text-muted: #555;
-    --clr-accent: #d4a017;
+    --clr-text-muted: #555555;
     --clr-footer-bg: #004d28;
 
     --font-display: 'Playfair Display', Georgia, serif;
@@ -32,6 +29,7 @@
     padding: 0;
 }
 
+/* ---------- Body ---------- */
 body {
     font-family: var(--font-body);
     font-size: 1rem;
@@ -60,7 +58,7 @@ header h1 {
     background-color: var(--clr-green-dark);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero Wrapper ---------- */
 .hero-wrapper {
     position: relative;
 }
@@ -76,7 +74,7 @@ header h1 {
 /* ---------- Cards (mobile: stacked below image) ---------- */
 .data-card,
 .weather-card {
-    background: var(--clr-white);
+    background-color: var(--clr-white);
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
     padding: 1.5rem 1.75rem;
@@ -111,21 +109,21 @@ dd {
     text-align: left;
 }
 
-/* ---------- Weather – mobile ---------- */
+/* ---------- Weather – Mobile ---------- */
 .weather-heading {
     display: flex;
     align-items: center;
     gap: 0.6rem;
 }
 
-/* Pseudo-element icon – hidden on mobile, shown on wide via place-large.css */
+/* Pseudo-element ⛅ icon – hidden on mobile */
 .weather-heading::after {
     content: '⛅';
     font-size: 1.5rem;
     display: none;
 }
 
-/* SVG icon – mobile only */
+/* SVG icon visible on mobile */
 .weather-icon-svg {
     display: block;
     margin: 0.75rem auto 1rem;
@@ -139,4 +137,72 @@ footer {
     padding: 1.25rem 1rem;
     font-size: 0.92rem;
     line-height: 1.9;
+}
+
+/* =====================================================
+   MEDIA QUERY – Wide layout (min-width: 760px)
+   ===================================================== */
+@media (min-width: 760px) {
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-wrapper {
+        overflow: hidden;
+    }
+
+    .hero-img {
+        max-height: 520px;
+    }
+
+    /* Cards float over the hero image */
+    .data-card,
+    .weather-card {
+        position: absolute;
+        margin: 0;
+        width: 290px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 0 1.75rem 1.5rem;
+    }
+
+    .data-card {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .weather-card {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* Green header bar inside cards */
+    .data-card h2,
+    .weather-card h2 {
+        background-color: var(--clr-green);
+        color: var(--clr-white);
+        margin: 0 -1.75rem 1rem;
+        padding: 0.6rem 1.75rem;
+        border-radius: var(--radius-card) var(--radius-card) 0 0;
+        border-bottom: none;
+        font-size: 1.5rem;
+    }
+
+    /* Show ⛅ pseudo-element on wide */
+    .weather-heading::after {
+        display: inline;
+    }
+
+    .weather-heading {
+        justify-content: space-between;
+    }
+
+    /* Hide SVG icon on wide */
+    .weather-icon-svg {
+        display: none;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
 }
