@@ -112,3 +112,41 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+
+/* ===== TEMPLE CARDS (NEW JS RENDERED LAYOUT) ===== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.temple-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.temple-card:hover {
+    transform: scale(1.03);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.temple-card h2 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+}
+
+.temple-card p {
+    margin: 4px 0;
+}
