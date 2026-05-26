@@ -74,12 +74,6 @@ main h1 {
 
 /* GALLERY */
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
 figure {
     background-color: white;
     padding: 1rem;
